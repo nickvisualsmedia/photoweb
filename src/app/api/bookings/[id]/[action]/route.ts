@@ -32,6 +32,13 @@ export async function GET(
       data: { status: "CONFIRMED" },
     });
 
+    // Formátování data do čitelné české podoby
+    const formattedDate = new Date(booking.requestedDate).toLocaleDateString("cs-CZ", {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    });
+
     // Notify client of confirmation
     await transporter.sendMail({
       from: `"Nick Visuals" <${process.env.SMTP_USER}>`,
@@ -42,6 +49,13 @@ export async function GET(
           <h2 style="color: #FFFFFF;">Váš termín byl úspěšně potvrzen</h2>
           <p>Dobrý den, ${booking.clientName},</p>
           <p>Váš termín pro automobilové focení vozu <strong>${booking.carModel}</strong> na balíček <strong>${booking.packageTier}</strong> byl potvrzen.</p>
+          
+          <div style="background: #14221C; border: 1px solid #2A3F35; padding: 16px; border-radius: 6px; margin: 20px 0;">
+            <p style="margin: 0; font-size: 16px; color: #F4F0EA;">
+              📅 <strong>Rezervovaný termín:</strong> ${formattedDate} v ${booking.requestedTime || "14:00"}
+            </p>
+          </div>
+
           <p>Těším se na spolupráci. V případě dalších dotazů či koordinace lokace mi můžete odpovědět přímo na tento email.</p>
           <br>
           <p>S pozdravem,<br><strong>Nick Visuals Media</strong></p>
