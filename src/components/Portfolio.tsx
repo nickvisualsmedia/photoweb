@@ -17,9 +17,9 @@ export interface PhotoItem {
 const initialPortfolio: PhotoItem[] = [
   {
     id: "1",
-    src: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80",
-    alt: "Dark sports coupe parked in industrial backdrop with clean polarizer reflections",
-    title: "Porsche GT3 Touring",
+    src: "https://www.instagram.com/p/DezamH4iA3x/?img_index=1",
+    alt: "BMW M3 G91 Ruby Star parked in autumn forest with golden leaves",
+    title: "Ruby Star G81",
     category: "static",
   },
   {
@@ -27,14 +27,14 @@ const initialPortfolio: PhotoItem[] = [
     src: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1200&q=80",
     alt: "Automotive front headlight detail with carbon fiber weave texture",
     title: "Carbon Fiber Optics",
-    category: "detail",
+    category: "static",
   },
   {
     id: "3",
     src: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=80",
     alt: "Vehicle rolling shot along sunset road with wheel motion blur",
     title: "Golden Hour Run",
-    category: "rolling",
+    category: "detail",
   },
   {
     id: "4",
