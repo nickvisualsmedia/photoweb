@@ -16,7 +16,7 @@ export const About: React.FC = () => {
             <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-2xl bg-beige-200">
               <div className="absolute inset-0 bg-green-primary/10 mix-blend-multiply" />
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                src="/images/PhotoOfMe.jpg"
                 alt="Nick automotive visual creator working on vehicle lines"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -29,7 +29,7 @@ export const About: React.FC = () => {
                 <span className="text-xs uppercase tracking-wider font-semibold">Equipment</span>
               </div>
               <p className="text-xs text-beige-200/90 leading-relaxed">
-                iPhone 12 Pro paired with optical Circular Polarizer Filter CPL
+                iPhone 12 Pro paired with CPL, or Canon EOS R8 with 24-50mm lens and polarizer for photography.
               </p>
             </div>
           </div>

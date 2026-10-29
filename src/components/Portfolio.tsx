@@ -10,58 +10,58 @@ export interface PhotoItem {
   src: string;
   alt: string;
   title: string;
-  category: "rolling" | "static" | "detail";
+  category: "static" | "detail";
 }
 
 // Production-ready initial items (Easily expandable)
 const initialPortfolio: PhotoItem[] = [
   {
     id: "1",
-    src: "https://www.instagram.com/p/DezamH4iA3x/?img_index=1",
+    src: "public//images/Market_17102026_Ruby_003.JPG",
     alt: "BMW M3 G91 Ruby Star parked in autumn forest with golden leaves",
     title: "Ruby Star G81",
     category: "static",
   },
   {
     id: "2",
-    src: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1200&q=80",
-    alt: "Automotive front headlight detail with carbon fiber weave texture",
-    title: "Carbon Fiber Optics",
+    src: "public/images/photo_3_2026-10-29_15-29-13.jpg",
+    alt: "Blue Subaru WRX STI parked near an apartment building during autumn",
+    title: "Blue Autumn",
     category: "static",
   },
   {
     id: "3",
-    src: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=80",
-    alt: "Vehicle rolling shot along sunset road with wheel motion blur",
-    title: "Golden Hour Run",
+    src: "public//images/Market_17102026_Ruby_012.JPG",
+    alt: "Ruby star BMW M3 G81 with peak interior",
+    title: "Autumn details",
     category: "detail",
   },
   {
     id: "4",
-    src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
-    alt: "Sports car rear taillight reflection in dusk city light",
-    title: "Monochrome Stance",
+    src: "public/images/photo_2_2026-10-29_15-29-13.jpg",
+    alt: "Vibrant neon yellow sports car parked on an urban street with a rear wing",
+    title: "Neon Stance",
     category: "static",
   },
   {
     id: "5",
-    src: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80",
-    alt: "Classic wheel rim detail with clean circular polarizer specular highlight",
-    title: "Bespoke Rim Contour",
-    category: "detail",
+    src: "public/images/photo_6_2026-10-29_15-29-13.jpg",
+    alt: "Grey Ferrari sports car parked on a historic European city street",
+    title: "Urban Elegance",
+    category: "static",
   },
   {
     id: "6",
-    src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
-    alt: "High performance vehicle tracked along asphalt highway curve",
-    title: "Motion Perspective",
-    category: "rolling",
+    src: "public/images/photo_1_2026-10-29_15-29-13.jpg",
+    alt: "White Porsche 911 Cabriolet with a red soft top parked under green trees on a city street",
+    title: "Summer Cabriolet",
+    category: "static",
   },
 ];
 
 export const Portfolio: React.FC = () => {
   const { language } = useLanguage();
-  const [filter, setFilter] = useState<"all" | "static" | "rolling" | "detail">("all");
+  const [filter, setFilter] = useState<"all" | "static" | "detail">("all");
   const [activePhoto, setActivePhoto] = useState<PhotoItem | null>(null);
 
   const filteredItems = filter === "all" 
@@ -69,8 +69,8 @@ export const Portfolio: React.FC = () => {
     : initialPortfolio.filter((item) => item.category === filter);
 
   const labels = {
-    cz: { all: "Vše", static: "Statické", rolling: "Rolling", detail: "Detaily", title: "Vybrané Projekty" },
-    en: { all: "All", static: "Static", rolling: "Rolling", detail: "Details", title: "Selected Works" },
+    cz: { all: "Vše", static: "Statické", detail: "Detaily", title: "Vybrané Projekty" },
+    en: { all: "All", static: "Static", detail: "Details", title: "Selected Works" },
   };
 
   const l = labels[language];
@@ -90,7 +90,7 @@ export const Portfolio: React.FC = () => {
 
           {/* Gallery Category Filter */}
           <div className="flex flex-wrap gap-2 text-xs uppercase tracking-wider font-medium">
-            {(["all", "static", "rolling", "detail"] as const).map((cat) => (
+            {(["all", "static", "detail"] as const).map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
