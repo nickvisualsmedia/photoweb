@@ -85,40 +85,40 @@ export const translations: Record<Language, Translations> = {
       badge: "Automobilová Fotografie",
       headline: "Každá křivka vypráví příběh",
       subheadline:
-        "Precizní zachycení automobilové estetiky a emocí v pohybu i klidu. Specializovaná tvorba vizuálů pro majitele unikátních vozů a komunitní projekty.",
+        "S radostí a vášní zachycuji krásu aut a emoce s nimi spojené. Věnuji se tvorbě fotografií pro majitele jedinečných vozů a pro všechny, kteří mají rádi automobilovou kulturu.",
       ctaPrimary: "Rezervovat focení",
       ctaSecondary: "Prohlédnout portfolio",
     },
     about: {
       sectionTag: "Příběh a Vize",
-      title: "Za objektivem Nick Visuals",
+      title: "Kdo stojí za Nick Visuals",
       paragraph1:
-        "Jmenuji se Nick a automobily pro mě představují dokonalé spojení inženýrského umu a sochařského designu. Vizuální tvorbě se věnuji s důrazem na čistotu kompozice přirozeného světla a zachycení autentického charakteru každého stroje.",
+        "Jmenuji se Nick a auta pro mě představují vášeň od mala a zároveň hobby, které dělá radost také ostatním. Vizuální tvorbě se věnuji s důrazem na čistotu kompozice.",
       paragraph2:
         "Můj přístup stojí na respektu k detailům. Nehledám prefabrikovaná klišé ale vyhledávám lokace které podtrhnou identitu konkrétního vozu a dodají snímkům nadčasový charakter.",
       gearTitle: "Technika a Vybavení",
       gearDesc:
-        "Využívám iPhone 12 Pro doplněný o prémiový Circular Polarizer Filter CPL. Tento polarizační filtr eliminuje rušivé odlesky karoserie oken a umožňuje zachytit skutečnou hloubku laku i vnitřních textur s neobyčejnou čistotou.",
+        "Využívám iPhone 12 Pro doplněný CPL filtrem. Tenhle polarizační filtr eliminuje rušivé odlesky karoserie oken a umožňuje zachytit skutečnou hloubku laku i vnitřních textur s neobyčejnou čistotou.",
     },
     whyMe: {
       sectionTag: "Důvody pro spolupráci",
-      title: "Proč svěřit vizuál svého vozu právě mně",
+      title: "Proč svěřit focení svého vozu právě mně",
       items: [
         {
-          title: "Cítění pro designové linie",
+          title: "Praxe a cit pro kompozici",
           desc: "Každý vůz má své specifické úhly které z něj dělají unikát. Vím přesně kam postavit světlo a jak komponovat scénu.",
         },
         {
-          title: "Bleskové dodání fotografií",
+          title: "Rychlé dodání fotografií",
           desc: "Kompletně zpracované a vyretušované snímky obdržíte v plném rozlišení již během několika málo dnů od realizace.",
         },
         {
           title: "Pečlivě zvolené lokace",
-          desc: "Scenérie vybírám tak aby ladila s charakterem vašeho vozu ať už jde o moderní architekturu nebo venkovské cesty.",
+          desc: "Scenérie vybírám tak, aby ladila s vaším vozem ať už jde o moderní architekturu, venkovské cesty nebo industriální prostředí.",
         },
         {
           title: "Skutečná vášeň pro automobily",
-          desc: "Automotive kultura je mým životním stylem což se odráží v každém jednom vyfoceném a upraveném snímku.",
+          desc: "Autíčkářská kultura je mým životním stylem což se odráží v každém jednom vyfoceném a upraveném snímku.",
         },
       ],
     },
@@ -175,7 +175,7 @@ export const translations: Record<Language, Translations> = {
       email: "E mailová adresa",
       phone: "Telefonní číslo",
       carModel: "Model vozu a rok výroby",
-      notes: "Poznámka ke konkrétní představě či lokaci",
+      notes: "Lokace, poznámky nebo specifické požadavky",
       submitBtn: "Odeslat nezávaznou poptávku",
       submitting: "Odesílám rezervaci...",
       successMessage:
@@ -204,37 +204,37 @@ export const translations: Record<Language, Translations> = {
       ctaSecondary: "View Portfolio",
     },
     about: {
-      sectionTag: "Story and Vision",
-      title: "Behind the lens of Nick Visuals",
+      sectionTag: "Story & Vision",
+      title: "Who Is Behind Nick Visuals",
       paragraph1:
-        "I am Nick and to me vehicles represent a synthesis of mechanical engineering and pure sculptural art. I focus on raw compositional balance natural lighting and honoring the genuine spirit of every machine.",
+        "I'm Nick, and cars have been my passion since I was a kid. Photography is a hobby of mine that lets me bring a little joy to others, too. When it comes to my visuals, I always focus on keeping the composition clean and natural.",
       paragraph2:
-        "My approach focuses on clean lines and texture clarity. Rather than rely on artificial setups I match unique architectural or scenic environments to the personality of your car.",
-      gearTitle: "Equipment and Technique",
+        "My approach is all about paying attention to the details. Instead of sticking to cliché setups, I like to find spots that really bring out the unique character of each car and give the photos a timeless feel.",
+      gearTitle: "Gear & Equipment",
       gearDesc:
-        "I shoot using an iPhone 12 Pro equipped with an optical grade Circular Polarizer Filter CPL. This specialized filter cuts glare from glass and paintwork revealing true reflections and deep color contrast.",
+        "I shoot on an iPhone 12 Pro paired with a CPL filter. This polarizing filter cuts out harsh reflections on the bodywork and windows, letting the real depth of the paint and interior textures shine through with beautiful clarity.",
     },
     whyMe: {
       sectionTag: "Value Proposition",
-      title: "Why work with Nick Visuals",
+      title: "Why entrust your car shoot to me",
       items: [
         {
-          title: "Eye for automotive geometry",
-          desc: "Every car possesses signature perspectives. I compose with absolute precision to showcase that unique stance.",
+          title: "An Eye for Composition",
+          desc: "Every car has unique angles that make it stand out. I know exactly how to set up the lighting and frame the shot.",
         },
         {
-          title: "Prompt turnaround",
-          desc: "Receive your fully edited high resolution photographs safely within a few working days without long delays.",
+          title: "Quick Turnaround",
+          desc: "You will get your fully edited and retouched photos in full resolution just a few days after the shoot.",
         },
         {
-          title: "Tailored shoot locations",
-          desc: "Locations are curated specifically around your vehicle character whether industrial architectural or open road.",
+          title: "Handpicked Locations",
+          desc: "I choose spots that vibe with your car, whether it is modern architecture, country roads, or an industrial backdrop.",
         },
         {
-          title: "Genuine motoring passion",
-          desc: "Cars are my true craft and obsession and that authentic commitment translates directly into final imagery.",
+          title: "True Passion for Cars",
+          desc: "Car culture is a way of life for me, and that love shows in every single shot I take and edit.",
         },
-      ],
+      ]
     },
     pricing: {
       sectionTag: "Transparent Rates",
@@ -289,16 +289,16 @@ export const translations: Record<Language, Translations> = {
       email: "Email Address",
       phone: "Phone Number",
       carModel: "Vehicle Make and Model",
-      notes: "Notes or specific location ideas",
+      notes: "Location, notes or specific requests",
       submitBtn: "Send Booking Request",
       submitting: "Submitting request...",
       successMessage:
-        "Thank you for reaching out. Your photoshoot request has been received and I will contact you shortly to confirm.",
+        "Thank you for reaching out. Your shoot request has been received and I will contact you shortly to confirm.",
       errorMessage: "An error occurred while submitting your request. Please try again.",
     },
     footer: {
       rights: "All rights reserved.",
-      tagline: "Editorial automotive photography portfolio.",
+      tagline: "Editorial car photography portfolio.",
     },
   },
 };
