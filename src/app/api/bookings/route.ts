@@ -37,7 +37,7 @@ export async function POST(req: Request) {
       },
     });
 
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://10.0.0.13:3000";
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
     const acceptLink = `${appUrl}/api/bookings/${booking.id}/accept?token=${booking.actionToken}`;
     const rejectLink = `${appUrl}/api/bookings/${booking.id}/reject?token=${booking.actionToken}`;
 
