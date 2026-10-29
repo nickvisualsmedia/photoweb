@@ -21,7 +21,26 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing required parameters" }, { status: 400 });
     }
 
-    // Persist booking with secure token and 7-day expiration
+    const timeSlot = requestedTime || "14:00";
+
+    // 1. KROK: ZKONTROLUJEME, ZDA JIŽ NEEXISTUJE REZERVACE NA STEJNÉ DATUM A ČAS
+    const existingBooking = await db.booking.findFirst({
+      where: {
+        requestedDate: new Date(requestedDate),
+        requestedTime: timeSlot,
+        // Můžeš případně ošetřit, aby se nepočítaly ty, které už byly zamítnuté:
+        status: { not: "REJECTED" }, 
+      },
+    });
+
+    if (existingBooking) {
+      return NextResponse.json(
+        { error: "Tento termín a čas je již bohužel obsazen. Vyberte prosím jiný." },
+        { status: 400 }
+      );
+    }
+
+    // 2. KROK: Pokud je volno, vytvoříme rezervaci v databázi
     const booking = await db.booking.create({
       data: {
         clientName,
@@ -29,7 +48,7 @@ export async function POST(req: Request) {
         clientPhone,
         carModel,
         requestedDate: new Date(requestedDate),
-        requestedTime: requestedTime || "14:00",
+        requestedTime: timeSlot,
         packageTier,
         userNotes: userNotes || "",
         status: "PENDING",
@@ -55,7 +74,7 @@ export async function POST(req: Request) {
             <tr><td style="padding: 8px 0; color: #8C694F;">Telefon:</td><td>${clientPhone}</td></tr>
             <tr><td style="padding: 8px 0; color: #8C694F;">Vozidlo:</td><td>${carModel}</td></tr>
             <tr><td style="padding: 8px 0; color: #8C694F;">Balíček:</td><td>${packageTier}</td></tr>
-            <tr><td style="padding: 8px 0; color: #8C694F;">Požadovaný termín:</td><td>${requestedDate} v ${requestedTime}</td></tr>
+            <tr><td style="padding: 8px 0; color: #8C694F;">Požadovaný termín:</td><td>${requestedDate} v ${timeSlot}</td></tr>
             <tr><td style="padding: 8px 0; color: #8C694F;">Poznámka:</td><td>${userNotes || "Bez poznámky"}</td></tr>
           </table>
           
