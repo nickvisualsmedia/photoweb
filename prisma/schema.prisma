@@ -1,0 +1,67 @@
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  REJECTED
+}
+
+enum PackageTier {
+  BASIC
+  STANDARD
+  PREMIUM
+}
+
+model Booking {
+  id              String        @id @default(uuid())
+  clientName      String        @db.VarChar(100)
+  clientEmail     String        @db.VarChar(150)
+  clientPhone     String        @db.VarChar(30)
+  carModel        String        @db.VarChar(120)
+  requestedDate   DateTime      @db.Date
+  requestedTime   String        @db.VarChar(50)
+  packageTier     PackageTier
+  userNotes       String?       @db.Text
+  status          BookingStatus @default(PENDING)
+  actionToken     String        @unique @default(uuid())
+  tokenExpiresAt  DateTime
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([requestedDate])
+  @@index([status])
+  @@index([clientEmail])
+  @@map("bookings")
+}
+
+model PortfolioItem {
+  id          String   @id @default(uuid())
+  title       String   @db.VarChar(100)
+  category    String   @db.VarChar(50)
+  imageUrl    String   @db.VarChar(255)
+  aspectRatio String   @default("4/5") @db.VarChar(10)
+  carModel    String   @db.VarChar(100)
+  orderIndex  Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@index([category])
+  @@map("portfolio_items")
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  email        String   @unique @db.VarChar(150)
+  passwordHash String   @db.VarChar(255)
+  name         String   @db.VarChar(100)
+  createdAt    DateTime @default(now())
+
+  @@map("admin_users")
+}

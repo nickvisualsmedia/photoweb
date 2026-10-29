@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #14221C;
+    color: #F4F0EA;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+}
+
+:root {
+  --color-beige: #F4F0EA;
+  --color-dark-green: #14221C;
+  --color-dark-green-accent: #1B2A23;
+  --color-brown: #4A3525;
+  --color-brown-light: #6E503B;
+  --color-charcoal: #0E1110;
+}
+
+html {
+  background-color: var(--color-charcoal);
+  color-scheme: dark;
+}
+
+/* Custom interactive spring overshoot class utility */
+.spring-interactive {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
