@@ -83,7 +83,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: "Automobilová Fotografie",
-      headline: "Každá křivka vypráví příběh",
+      headline: "Každý shot vypráví příběh",
       subheadline:
         "S radostí a vášní zachycuji krásu aut a emoce s nimi spojené. Věnuji se tvorbě fotografií pro majitele jedinečných vozů a pro všechny, kteří mají rádi automobilovou kulturu.",
       ctaPrimary: "Rezervovat focení",
@@ -95,7 +95,7 @@ export const translations: Record<Language, Translations> = {
       paragraph1:
         "Jmenuji se Nick a auta pro mě představují vášeň od mala a zároveň hobby, které dělá radost také ostatním. Vizuální tvorbě se věnuji s důrazem na čistotu kompozice.",
       paragraph2:
-        "Můj přístup stojí na respektu k detailům. Nehledám prefabrikovaná klišé ale vyhledávám lokace které podtrhnou identitu konkrétního vozu a dodají snímkům nadčasový charakter.",
+        "Můj přístup stojí na vychycených detailech. Nehledám nějaké kraviny ale vyhledávám lokace které vystihnou každé auto a dodají fotkám charakter.",
       gearTitle: "Technika a Vybavení",
       gearDesc:
         "Využívám iPhone 12 Pro doplněný CPL filtrem. Tenhle polarizační filtr eliminuje rušivé odlesky karoserie oken a umožňuje zachytit skutečnou hloubku laku i vnitřních textur s neobyčejnou čistotou.",
@@ -197,7 +197,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: "Automotive Visuals",
-      headline: "Every contour tells an authentic story",
+      headline: "Every shot tells a story",
       subheadline:
         "Precise capture of automotive design and motion. Editorial photography dedicated to car enthusiasts collectors and creative projects.",
       ctaPrimary: "Book a Photoshoot",
@@ -209,7 +209,7 @@ export const translations: Record<Language, Translations> = {
       paragraph1:
         "I'm Nick, and cars have been my passion since I was a kid. Photography is a hobby of mine that lets me bring a little joy to others, too. When it comes to my visuals, I always focus on keeping the composition clean and natural.",
       paragraph2:
-        "My approach is all about paying attention to the details. Instead of sticking to cliché setups, I like to find spots that really bring out the unique character of each car and give the photos a timeless feel.",
+        "My approach is all about focusing on the small details. I don't care for cliché fluff, but I look for locations that truly fit each car and give the photos real character.",
       gearTitle: "Gear & Equipment",
       gearDesc:
         "I shoot on an iPhone 12 Pro paired with a CPL filter. This polarizing filter cuts out harsh reflections on the bodywork and windows, letting the real depth of the paint and interior textures shine through with beautiful clarity.",
