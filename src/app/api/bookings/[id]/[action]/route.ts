@@ -52,7 +52,7 @@ export async function GET(
           
           <div style="background: #14221C; border: 1px solid #2A3F35; padding: 16px; border-radius: 6px; margin: 20px 0;">
             <p style="margin: 0; font-size: 16px; color: #F4F0EA;">
-              📅 <strong>Rezervovaný termín:</strong> ${formattedDate} v ${booking.requestedTime || "14:00"}
+              <strong>Rezervovaný termín:</strong> ${formattedDate} v ${booking.requestedTime || "14:00"}
             </p>
           </div>
 
