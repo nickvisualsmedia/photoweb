@@ -29,7 +29,7 @@ export const About: React.FC = () => {
                 <span className="text-xs uppercase tracking-wider font-semibold">Equipment</span>
               </div>
               <p className="text-xs text-beige-200/90 leading-relaxed">
-                iPhone 12 Pro paired with CPL, or Canon EOS R8 with 24-50mm lens and polarizer for photography.
+                iPhone 12 Pro s CPL filtrem či Canon EOS R8 s 24-50mm objektivem a polarizerem pro top fotky.
               </p>
             </div>
           </div>
