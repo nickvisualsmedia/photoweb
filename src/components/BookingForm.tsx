@@ -33,7 +33,9 @@ export const BookingForm: React.FC<BookingFormProps> = ({ selectedPackage, onSel
         const res = await fetch("/api/bookings/occupied");
         const data = await res.json();
         if (data.occupiedDates) {
-          setOccupiedDates(data.occupiedDates);
+          // Normalizujeme data z DB na YYYY-MM-DD, aby seděla s inputem
+          const normalizedDates = data.occupiedDates.map((d: string) => d.split("T")[0]);
+          setOccupiedDates(normalizedDates);
         }
       } catch (err) {
         console.error("Chyba při načítání obsazených termínů:", err);
@@ -42,11 +44,21 @@ export const BookingForm: React.FC<BookingFormProps> = ({ selectedPackage, onSel
     fetchOccupiedDates();
   }, []);
 
+  // Bezpečná kontrola, zda je vybraný den obsazený
+  const isDateOccupied = occupiedDates.includes(date);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Rychlá kontrola připojení k internetu na straně klienta
+    if (!navigator.onLine) {
+      setStatus("error");
+      setErrorText("Vypadá to, že nemáte připojení k internetu. Zkontrolujte si prosím Wi-Fi nebo data.");
+      return;
+    }
+
     // Kontrola, zda vybraný den není již obsazený
-    if (occupiedDates.includes(date)) {
+    if (isDateOccupied) {
       setStatus("error");
       setErrorText("Tento termín je již obsazený. Vyberte prosím jiný den.");
       return;
@@ -158,14 +170,14 @@ export const BookingForm: React.FC<BookingFormProps> = ({ selectedPackage, onSel
                     onChange={(e) => setDate(e.target.value)}
                     required
                     className={`w-full bg-charcoal/80 border rounded-lg px-4 py-3 text-sm text-beige-100 focus:outline-none transition-colors ${
-                      occupiedDates.includes(date)
+                      isDateOccupied
                         ? "border-red-500 text-red-300"
                         : "border-white/15 focus:border-beige-100"
                     }`}
                   />
                   <CalendarIcon size={16} className="absolute right-4 top-3.5 text-beige-200 pointer-events-none" />
                 </div>
-                {occupiedDates.includes(date) && (
+                {isDateOccupied && (
                   <p className="text-xs text-red-400 mt-1">⚠️ Tento den je již obsazený a potvrzený.</p>
                 )}
               </div>
@@ -257,7 +269,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ selectedPackage, onSel
 
             <button
               type="submit"
-              disabled={loading || occupiedDates.includes(date)}
+              disabled={loading || isDateOccupied}
               className="w-full py-4 rounded-full bg-beige-100 text-charcoal font-semibold text-sm uppercase tracking-wider hover:bg-white transition-all duration-300 hover:scale-[1.02] active:scale-95 ease-spring-overshoot shadow-lg disabled:opacity-50"
             >
               {loading ? t.booking.submitting : t.booking.submitBtn}
