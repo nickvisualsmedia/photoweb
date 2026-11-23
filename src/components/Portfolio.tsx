@@ -45,9 +45,9 @@ const initialPortfolio: PhotoItem[] = [
   },
   {
     id: "5",
-    src: "/images/photo_6_2026-10-29_15-29-13.jpg",
-    alt: "Grey Ferrari sports car parked on a historic European city street",
-    title: "Urban Elegance",
+    src: "/images/20261031-IMG_7755.jpg",
+    alt: "White street build e39 with neon line on bottom with wheels tucked in on a show",
+    title: "Static Elegance",
     category: "static",
   },
   {
