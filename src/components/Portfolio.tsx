@@ -38,10 +38,10 @@ const initialPortfolio: PhotoItem[] = [
   },
   {
     id: "4",
-    src: "/images/photo_2_2026-10-29_15-29-13.jpg",
-    alt: "Vibrant neon yellow sports car parked on an urban street with a rear wing",
-    title: "Neon Stance",
-    category: "static",
+    src: "/images/Untitled-1.jpg",
+    alt: "Beautiful Nissan 370z with a extreme rear wing touching the sky",
+    title: "Extreme views",
+    category: "detail",
   },
   {
     id: "5",
@@ -52,9 +52,9 @@ const initialPortfolio: PhotoItem[] = [
   },
   {
     id: "6",
-    src: "/images/photo_1_2026-10-29_15-29-13.jpg",
-    alt: "White Porsche 911 Cabriolet with a red soft top parked under green trees on a city street",
-    title: "Summer Cabriolet",
+    src: "/images/20261031-IMG_7424.jpg",
+    alt: "Blue e36 lowered to the extreme parked in front of industrial hall",
+    title: "Carshow Beauty",
     category: "static",
   },
 ];
